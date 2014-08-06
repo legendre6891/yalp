@@ -12,9 +12,9 @@ endif
 if !exists("b:yalp_loaded")
 	let prefix = expand('<sfile>:p:h') . '/yalp/'
 
-    execute 'source ' . s:FNameEscape(prefix . 'jump')
-    execute 'source ' . s:FNameEscape(prefix . 'hotkeys')
-    execute 'source ' . s:FNameEscape(prefix . 'make')
+    execute 'source ' . s:FNameEscape(prefix . 'jump.vim')
+    execute 'source ' . s:FNameEscape(prefix . 'hotkeys.vim')
+    execute 'source ' . s:FNameEscape(prefix . 'make.vim')
 
     let b:yalp_loaded = 1
 
