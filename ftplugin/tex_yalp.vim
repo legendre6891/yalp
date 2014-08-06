@@ -1,4 +1,4 @@
-if !existsif exists('*fnameescape')
+if exists('*fnameescape')
     function! s:FNameEscape(s)
         return fnameescape(a:s)
     endfunction
