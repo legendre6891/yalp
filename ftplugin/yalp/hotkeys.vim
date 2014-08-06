@@ -1,3 +1,3 @@
-imap <buffer> <Tab> \<Plug>JumpJump
+imap <buffer> <Tab> <Plug>JumpJump
 
 
