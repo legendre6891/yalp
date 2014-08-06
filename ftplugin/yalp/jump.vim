@@ -77,7 +77,7 @@ endfunction
 "  Jump from the current location  "
 """"""""""""""""""""""""""""""""""""
 function! Jump()
-    currentCol = getcurpos()[2]
+    let currentCol = getcurpos()[2]
     let result = s:FindNextInterestingLocation(getpos('.'))
     if result[0] > 0 && result[2] < col('$')
         return repeat("\<Right>", result[2] - currentCol)
