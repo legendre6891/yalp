@@ -77,15 +77,15 @@ endfunction
 "  Jump from the current location  "
 """"""""""""""""""""""""""""""""""""
 function! Jump()
+    currentCol = getcurpos()[2]
     let result = s:FindNextInterestingLocation(getpos('.'))
     if result[0] > 0 && result[2] < col('$')
-        call cursor(result[1], result[2])
-        startinsert
+        return repeat("\<Right>", result[2] - currentCol)
     else
-        startinsert!
+        return "\<End>"
     endif
     return
 endfunction
 
 
-inoremap <buffer> <Plug>JumpJump <Esc>:call Jump()<CR>
+inoremap <buffer> <silent> <expr> <Plug>JumpJump Jump()
