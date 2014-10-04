@@ -18,6 +18,7 @@ if !exists("b:yalp_loaded")
     execute 'source ' . s:FNameEscape(prefix . 'list.vim')
     execute 'source ' . s:FNameEscape(prefix . 'hotkeys.vim')
     execute 'source ' . s:FNameEscape(prefix . 'make.vim')
+    execute 'source ' . s:FNameEscape(prefix . 'compatibility.vim')
 
     let b:yalp_loaded = 1
 
