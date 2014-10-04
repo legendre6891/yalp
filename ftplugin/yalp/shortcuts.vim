@@ -14,6 +14,7 @@ let g:backtick_dictionary = {
     \ 'm' : ['\mu'],
     \ 'n' : ['\nu'],
     \ 'o' : ['\omega'],
+    \ 'O' : ['\Omega'],
     \ 'p' : ['\pi'],
     \ 'q' : ['\theta', '\vartheta'],
     \ 'r' : ['\rho'],
@@ -26,9 +27,12 @@ let g:backtick_dictionary = {
     \ 'x' : ['\chi'],
     \ 'y' : ['\psi'],
     \ 'z' : ['\zeta'],
+    \ '0' : ['\emptyset'],
+    \ '8' : ['\infty'],
     \ '.' : ['\cdot', '\dots'],
+    \ '=' : ['\implies', '\impliedby', '\iff'],
     \ '/' : ['\frac{@}{}'],
-    \ 'I' : ['\int{@}{}'],
+    \ 'I' : ['\int_{@}^{}'],
     \ '(' : ['\bigl( @ \bigr)', '\biggl( @ \biggr)', '\left( @ \right)'],
     \ '<' : ['\langle @ \rangle', '\bigl< @ \bigr>', '\biggl< @ \biggr>'],
     \ '[' : ['\bigl[ @ \bigr]', '\biggl[ @ \biggr]', '\left[ @ \right]'],
@@ -38,6 +42,7 @@ let g:backtick_dictionary = {
 
 let g:quote_dictionary = {
     \ 't' : ['\text{@}'],
+    \ 'q' : ['\quad'],
     \ 'e' : ['\emph{@}'],
     \ 'b' : ['\textbf{@}'],
     \ 'y' : ['\texttt{@}'],
@@ -47,7 +52,7 @@ let g:semicolon_dictionary = {
     \ '/' : ['\frac{@}{}', '\dfrac{@}{}'],
     \ 'f' : ['\frac{@}{}', '\dfrac{@}{}'],
     \ 's' : ['\sum_{@}^{}'],
-    \ 'p' : ['\product_{@}^{}'],
+    \ 'p' : ['\prod_{@}^{}'],
     \ 'i' : ['\int_{@}^{}']}
 
 
