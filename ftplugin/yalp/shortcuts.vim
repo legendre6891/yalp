@@ -30,7 +30,7 @@ let g:backtick_dictionary = {
     \ '/' : ['\frac{@}{}'],
     \ 'I' : ['\int{@}{}'],
     \ '(' : ['\bigl( @ \bigr)', '\biggl( @ \biggr)', '\left( @ \right)'],
-    \ '<' : ['\langle @ \rangle', '\bigl\langle @ \bigr\rangle', '\biggl\langle @ \biggr\rangle'],
+    \ '<' : ['\langle @ \rangle', '\bigl< @ \bigr>', '\biggl< @ \biggr>'],
     \ '[' : ['\bigl[ @ \bigr]', '\biggl[ @ \biggr]', '\left[ @ \right]'],
     \ '|' : ['\bigl| @ \bigr|', '\biggl| @ \biggr|', '\left| @ \right|'],
     \ '{' : ['\bigl\{ @ \bigr\}', '\biggl\{ @ \biggr\}', '\left\{ @ \right\}']}
