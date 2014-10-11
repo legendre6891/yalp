@@ -5,6 +5,7 @@ let g:backtick_dictionary = {
     \ 'd' : ['\delta'],
     \ 'e' : ['\epsilon', '\varepsilon'],
     \ 'f' : ['\phi', '\varphi'],
+    \ 'F' : ['\Phi'],
     \ 'g' : ['\gamma'],
     \ 'h' : ['\eta'],
     \ 'i' : ['\in', '\iota'],
