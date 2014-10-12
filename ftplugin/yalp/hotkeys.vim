@@ -10,3 +10,7 @@ inoremap <buffer> <C-Space> <C-X><C-O>
 
 inoremap <buffer> $ $$<Left>
 inoremap <buffer> " ``''<Left><Left>
+
+
+
+nnoremap <buffer> K :make<cr>
