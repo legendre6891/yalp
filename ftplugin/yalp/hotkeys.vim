@@ -13,4 +13,5 @@ inoremap <buffer> " ``''<Left><Left>
 
 
 
-nnoremap <buffer> K :make<cr>
+nnoremap <buffer> KK :silent !make<cr>
+nnoremap <buffer> KL :make<cr>
