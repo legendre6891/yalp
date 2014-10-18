@@ -24,7 +24,6 @@ function! FindNextInterestingLocation(location)
     " Start at the *next* cursor position so that we
     " don't get trapped at the current one
     let counter = columnNumber
-    let offset = 0
 
     " Some adjustments:
     " * If we're at the beginning of a line, then move back one step
@@ -38,6 +37,23 @@ function! FindNextInterestingLocation(location)
     if columnNumber == columnEnd
         return [-1, lineNumber+1, columnEnd]
     endif
+
+    " First check the current position ...
+    let current = lineContent[counter-1]
+    let preceding = lineContent[counter - 2]
+    let following = lineContent[counter]
+
+    if stridx("})]", current) >= 0 && stridx("({[_^", following) == -1
+        return [2, lineNumber, counter+1]
+    endif
+
+    if stridx(" ", following) >= 0
+        return [4, lineNumber, counter+1]
+    endif
+
+
+
+
 
     " Loop through the current line to search for the
     " next interesting location
@@ -62,12 +78,12 @@ function! FindNextInterestingLocation(location)
         " Test this condition first because its column number is the
         " lowest
         if stridx("})]", current) >= 0 && stridx("-{[()]}", preceding) >=0
-            return [3, lineNumber, counter+1+offset]
+            return [3, lineNumber, counter+1]
         endif
 
         " Jump before *and* after the dollar sign
         if current == '$'
-            return [1, lineNumber, counter+1+offset]
+            return [1, lineNumber, counter+1]
         endif
 
         if preceding == '$'
@@ -76,11 +92,11 @@ function! FindNextInterestingLocation(location)
 
 
         if stridx("})]", current) >= 0 && stridx("({[_^", following) == -1
-            return [2, lineNumber, counter+2+offset]
+            return [2, lineNumber, counter+2]
         endif
 
         if stridx(" ", following) >= 0
-            return [4, lineNumber, counter+2+offset]
+            return [4, lineNumber, counter+2]
         endif
 
         let counter += 1
@@ -99,6 +115,8 @@ endfunction
 function! Jump()
     let currentCol = getcurpos()[2]
     let result = FindNextInterestingLocation(getpos('.'))
+
+    echom result[0]
     if result[0] > 0 && result[2] <= col('$')
         return repeat("\<Right>", result[2] - currentCol)
     endif
