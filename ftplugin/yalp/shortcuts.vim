@@ -2,7 +2,7 @@ let g:backtick_dictionary = {
     \ 'a' : ['\alpha'],
     \ 'b' : ['\beta'],
     \ 'c' : [],
-    \ 'd' : ['\delta'],
+    \ 'd' : ['\delta', '\partial'],
     \ 'e' : ['\epsilon', '\varepsilon'],
     \ 'f' : ['\phi', '\varphi'],
     \ 'F' : ['\Phi'],

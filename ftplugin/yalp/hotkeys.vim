@@ -11,9 +11,8 @@ inoremap <buffer> <C-Space> <C-X><C-O>
 inoremap <buffer> $ $$<Left>
 inoremap <buffer> " ``''<Left><Left>
 
-
 nnoremap <buffer> KK :Make<cr>
-nnoremap <buffer> KL :Make!<cr>
+nnoremap <buffer> KL :make!<cr>
 
 " nnoremap <buffer> KK :silent :make!<cr>
 " nnoremap <buffer> KL :make<cr>
