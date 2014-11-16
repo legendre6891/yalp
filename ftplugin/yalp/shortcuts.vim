@@ -18,6 +18,7 @@ let g:backtick_dictionary = {
     \ 'O' : ['\Omega'],
     \ 'p' : ['\pi'],
     \ 'q' : ['\theta', '\vartheta'],
+    \ 'Q' : ['\Theta'],
     \ 'r' : ['\rho'],
     \ 's' : ['\sigma'],
     \ 'S' : ['\Sigma'],
