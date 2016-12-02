@@ -1,24 +1,12 @@
-if exists('*fnameescape')
-    function! s:FNameEscape(s)
-        return fnameescape(a:s)
-    endfunction
-else
-    function! s:FNameEscape(s)
-        return a:s
-    endfunction
-endif
-
-
 if !exists("b:yalp_loaded")
 	let prefix = expand('<sfile>:p:h') . '/yalp/'
 
-    execute 'source ' . s:FNameEscape(prefix . 'jump.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'shortcuts.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'snippet.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'list.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'maps.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'make.vim')
-    execute 'source ' . s:FNameEscape(prefix . 'compatibility.vim')
+    execute 'source ' . fnamescape(prefix . 'jump.vim')
+    execute 'source ' . fnamescape(prefix . 'shortcuts.vim')
+    execute 'source ' . fnamescape(prefix . 'snippet.vim')
+    execute 'source ' . fnamescape(prefix . 'list.vim')
+    execute 'source ' . fnamescape(prefix . 'maps.vim')
+    execute 'source ' . fnamescape(prefix . 'make.vim')
 
     let b:yalp_loaded = 1
 
