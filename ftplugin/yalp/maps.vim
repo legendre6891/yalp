@@ -9,7 +9,7 @@ inoremap <buffer> <C-Space> <C-X><C-O>
 
 
 " Use autopairs instead of this!
-" inoremap <buffer> $ $$<Left>
+inoremap <buffer> $ $$<Left>
 
 inoremap <buffer> " ``''<Left><Left>
 
