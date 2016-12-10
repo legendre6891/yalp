@@ -7,6 +7,7 @@ if !exists("b:yalp_loaded")
     execute 'source ' . fnameescape(prefix . 'list.vim')
     execute 'source ' . fnameescape(prefix . 'maps.vim')
     execute 'source ' . fnameescape(prefix . 'make.vim')
+    execute 'source ' . fnameescape(prefix . 'tex_ultisnips.vim')
 
     let b:yalp_loaded = 1
 
