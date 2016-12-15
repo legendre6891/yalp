@@ -12,6 +12,7 @@ let g:backtick_dictionary = {
     \ 'j' : ['j'],
     \ 'k' : ['\kappa'],
     \ 'l' : ['\lambda'],
+    \ 'L' : ['\Lambda'],
     \ 'm' : ['\mu'],
     \ 'n' : ['\nu'],
     \ 'N' : ['\nabla'],
